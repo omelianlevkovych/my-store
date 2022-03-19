@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4501425D-F3B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.UI", "src\Store.UI\Store.UI.csproj", "{B85B0268-5A11-4B47-93C5-42BFC96086AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Domain", "src\Store.Domain\Store.Domain.csproj", "{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Application", "src\Store.Application\Store.Application.csproj", "{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,18 @@ Global
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
+		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
+		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
 	EndGlobalSection
 EndGlobal
