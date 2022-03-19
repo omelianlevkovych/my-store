@@ -1,7 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using Store.Application.Products;
+using Store.Application.Products.Interfaces;
+using Store.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IProductLogic, ProductLogic>();
 
 var app = builder.Build();
 
