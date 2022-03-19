@@ -1,34 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Store.Application.Products.Create;
-using Store.Application.Products.Get;
-using Store.Database;
+using Store.Application.Products.Interfaces;
+using Store.Application.Products.Models;
 
 namespace Store.UI.Pages;
 
 public class IndexModel : PageModel
 {
 
-    private readonly ApplicationDbContext context;
+    private readonly IProductLogic productLogic;
 
-    public IndexModel(ApplicationDbContext context)
+    public IndexModel(IProductLogic productLogic)
     {
-        this.context = context;
+        this.productLogic = productLogic;
     }
 
     [BindProperty]
-    public CreateProductModel Product {get; set; }
+    public ProductModel Product { get; set; }
 
-    public IEnumerable<GetProductModel> Products { get; set; }
+    public IEnumerable<ProductModel> Products { get; set; }
 
     public async Task OnGet()
     {
-        Products = await new GetProducts(context).Do();
+        Products = await productLogic.GetProducts();
     }
 
     public async Task<IActionResult> OnPost()
     {
-        await new CreateProduct(context).Do(Product);
+        await productLogic.CreateProduct(Product);
         return RedirectToPage("Index");
     }
 }

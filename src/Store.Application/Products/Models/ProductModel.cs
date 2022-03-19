@@ -1,7 +1,7 @@
-﻿namespace Store.Application.Products.Get
+﻿namespace Store.Application.Products.Models
 {
-    public class GetProductModel
-    {        
+    public class ProductModel
+    {
         public string Name { get; set; }
         public string? Description { get; set; }
     }

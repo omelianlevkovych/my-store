@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Store.Application.Products;
+using Store.Application.Products.Interfaces;
 using Store.Database;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IProductLogic, ProductLogic>();
 
 var app = builder.Build();
 
