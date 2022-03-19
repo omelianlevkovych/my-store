@@ -1,12 +1,7 @@
 ﻿using Store.Database;
 using Store.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Store.Application.Products
+namespace Store.Application.Products.Create
 {
     public class CreateProduct
     {
@@ -17,12 +12,12 @@ namespace Store.Application.Products
             this.context = context;
         }
 
-        public Task Do(string name, string description)
+        public Task Do(CreateProductModel product)
         {
             context.Products.Add(new ProductEntity
             {
-                Name = name,
-                Description = description,
+                Name = product.Name,
+                Description = product.Description,
             });
 
             return context.SaveChangesAsync();

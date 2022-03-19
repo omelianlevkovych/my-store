@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Store.Application.Products;
+using Store.Application.Products.Create;
+using Store.Application.Products.Get;
 using Store.Database;
-using Store.UI.Models;
 
 namespace Store.UI.Pages;
 
@@ -17,16 +17,18 @@ public class IndexModel : PageModel
     }
 
     [BindProperty]
-    public ProductViewModel Product {get; set; }
+    public CreateProductModel Product {get; set; }
 
-    public void OnGet()
+    public IEnumerable<GetProductModel> Products { get; set; }
+
+    public async Task OnGet()
     {
-
+        Products = await new GetProducts(context).Do();
     }
 
     public async Task<IActionResult> OnPost()
     {
-        await new CreateProduct(context).Do(Product.Name, Product.Description);
+        await new CreateProduct(context).Do(Product);
         return RedirectToPage("Index");
     }
 }
