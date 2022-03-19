@@ -17,14 +17,15 @@ namespace Store.Application.Products
             this.context = context;
         }
 
-        public void Do(int id, string name, string description)
+        public Task Do(string name, string description)
         {
             context.Products.Add(new ProductEntity
             {
-                Id = id,
                 Name = name,
                 Description = description,
             });
+
+            return context.SaveChangesAsync();
         }
     }
 }
