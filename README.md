@@ -6,3 +6,4 @@
 * Store.Application is responsible for handling our domain; it's basically pipeline between DB, Domain and UI.
 You can also think about Store.Application as an API to work with the domain objects.  
 It also contains ViewModels in order to decouple our representation design from the current UI implementation.
+
