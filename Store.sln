@@ -1,25 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4501425D-F3B7-49BB-B040-DF4910A4D7F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.UI", "src\Store.UI\Store.UI.csproj", "{B85B0268-5A11-4B47-93C5-42BFC96086AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.UI", "src\Store.UI\Store.UI.csproj", "{B85B0268-5A11-4B47-93C5-42BFC96086AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Domain", "src\Store.Domain\Store.Domain.csproj", "{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Domain", "src\Store.Domain\Store.Domain.csproj", "{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Application", "src\Store.Application\Store.Application.csproj", "{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Application", "src\Store.Application\Store.Application.csproj", "{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Database", "src\Store.Database\Store.Database.csproj", "{5DA121FB-8AD4-421A-BE36-A73F55413B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Database", "src\Store.Database\Store.Database.csproj", "{5DA121FB-8AD4-421A-BE36-A73F55413B44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,10 +36,16 @@ Global
 		{5DA121FB-8AD4-421A-BE36-A73F55413B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA121FB-8AD4-421A-BE36-A73F55413B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B85B0268-5A11-4B47-93C5-42BFC96086AA} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
 		{9C4009CA-39B4-4FC6-8DF6-AE2604F01C38} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
 		{60E1B7ED-0C16-4DE5-8BE4-42EEC76625EE} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
 		{5DA121FB-8AD4-421A-BE36-A73F55413B44} = {4501425D-F3B7-49BB-B040-DF4910A4D7F6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD56B815-8076-49A2-8025-31277BBBBBAB}
 	EndGlobalSection
 EndGlobal

@@ -6,5 +6,8 @@ namespace Store.Application.Products.Interfaces
     {
         Task CreateProduct(ProductModel product);
         Task<IEnumerable<ProductModel>> GetProducts();
+        Task<ProductModel> GetProduct(int productId);
+        Task DeleteProduct(int productId);
+        Task UpdateProduct(ProductModel product);
     }
 }
